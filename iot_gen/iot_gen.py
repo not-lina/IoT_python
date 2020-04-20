@@ -1,8 +1,8 @@
 import wx
-from DataLoader import DataLoader
+from . import DataLoader
 import json
 import csv
-from plots import FPlotA, FPlotB, FPlotC
+from . import plots
 
 
 NUM_USERS = 10
@@ -13,13 +13,13 @@ class VisualizeData():
         self.parent = parent
 
     def PlotA(self, event):
-        f2 = FPlotA(self.parent.data.toDf())
+        f2 = plots.FPlotA(self.parent.data.toDf())
         f2.Show()
     def PlotB(self, event):
-        f3 = FPlotB(self.parent.data.toDf())
+        f3 = plots.FPlotB(self.parent.data.toDf())
         f3.Show()
     def PlotC(self, event):
-        f4 = FPlotC(self.parent.data.toDf())
+        f4 = plots.FPlotC(self.parent.data.toDf())
         f4.Show()
 
 class GenerateData(wx.Panel):

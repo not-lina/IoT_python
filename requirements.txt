@@ -1,0 +1,5 @@
+matplotlib~=3.2.1
+wxPython~=4.0.7.post2
+pandas~=1.0.3
+Faker~=4.0.3
+setuptools~=46.1.3
