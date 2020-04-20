@@ -2,6 +2,7 @@ import decimal
 from faker import Faker
 from dataclasses import dataclass
 
+
 """
 model of sensor array read
 """
@@ -104,3 +105,4 @@ class SensorArray():
         return SensorDataModel(
             o_tmp, o_hum, i_tmp, i_hum
         )
+
