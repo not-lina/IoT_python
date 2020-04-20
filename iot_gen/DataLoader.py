@@ -1,6 +1,6 @@
 from datetime import datetime, timedelta
-from .UserFactory import UserFactory
-from .SensorArray import SensorArray, SensorReading
+from UserFactory import UserFactory
+from SensorArray import SensorArray, SensorReading
 import pandas as pd
 
 class DataLoader():

@@ -1,9 +1,8 @@
 import wx
-from . import DataLoader
+from DataLoader import DataLoader
 import json
 import csv
-from . import plots
-
+from plots import FPlotC, FPlotB, FPlotA
 
 NUM_USERS = 10
 NUM_READINGS = 10
@@ -13,13 +12,13 @@ class VisualizeData():
         self.parent = parent
 
     def PlotA(self, event):
-        f2 = plots.FPlotA(self.parent.data.toDf())
+        f2 = FPlotA(self.parent.data.toDf())
         f2.Show()
     def PlotB(self, event):
-        f3 = plots.FPlotB(self.parent.data.toDf())
+        f3 = FPlotB(self.parent.data.toDf())
         f3.Show()
     def PlotC(self, event):
-        f4 = plots.FPlotC(self.parent.data.toDf())
+        f4 = FPlotC(self.parent.data.toDf())
         f4.Show()
 
 class GenerateData(wx.Panel):
@@ -85,7 +84,7 @@ class GenerateData(wx.Panel):
         if dialog.ShowModal() == wx.ID_CANCEL:
             return
 
-        filename = dialog.GetFilename()
+        filename = dialog.GetPath()
         data.fromCsv(filename)
         self.status.WriteText(f'loaded from{filename}\n')
         self.parent.data = data
