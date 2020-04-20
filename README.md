@@ -8,7 +8,13 @@ run the module
 python3 iot_gen_cnt4144-0.0.1/iot_gen
 ```
 
-included in the module iss generated.csv which has a set of
+or install from the rep
+```
+git clone https://github.com/not-lina/IoT_python
+python3 IoT_python/iot_python
+```
+
+Included in the module is `generated.csv` which has a set of
 test data that can be loaded into the module without
 needing to first generate it.
 
